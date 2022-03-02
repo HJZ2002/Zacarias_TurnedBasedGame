@@ -1,8 +1,7 @@
 package com.example.zacarias_turnedbasedgame;
 
-import androidx.appcompat.app.AppCompatActivity;
-
-import android.content.Intent;
+import android.app.ActionBar;
+import android.app.Activity;
 import android.content.res.ColorStateList;
 import android.os.Bundle;
 import android.view.View;
@@ -15,14 +14,14 @@ import android.widget.TextView;
 
 import java.util.Random;
 
-public class MainActivity extends AppCompatActivity implements View.OnClickListener {
-
-
+public class MainActivity extends Activity implements View.OnClickListener {
     TextView Assasintxt, Characterhptxt, Charactermanatxt, Monstertxt, Monsterhptxt, Monstermanatxt, Assasindpstxt, Ogredpstxt, Combatxt;
 
     Button btnNxturn;
     ImageButton First, Second, Third, Forth;
     ProgressBar healthbar, healthbar2;
+
+
 
     String Assasin = "Phantom Assasin";
 
@@ -53,8 +52,6 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         requestWindowFeature(Window.FEATURE_NO_TITLE);
         this.getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN, WindowManager.LayoutParams.FLAG_FULLSCREEN);
         setContentView(R.layout.activity_main);
-        getSupportActionBar().hide();
-
         Assasintxt = findViewById(R.id.Assasintxt);
         Characterhptxt = findViewById(R.id.Characterhptxt);
         Charactermanatxt = findViewById(R.id.CharacterManatxt);
@@ -103,7 +100,6 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
 
     }
-
     @Override
     public void onClick(View v) {
 
@@ -317,3 +313,4 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         }
     }
 }
+
