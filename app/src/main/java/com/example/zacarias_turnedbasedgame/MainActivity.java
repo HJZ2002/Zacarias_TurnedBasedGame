@@ -106,7 +106,7 @@ public class MainActivity extends Activity implements View.OnClickListener {
         Random randomizer = new Random();
         int herodps = randomizer.nextInt(heromaxdamage - heronmindamage) + heromaxdamage;
         int monsdps = randomizer.nextInt(monstermaximumdamage - monstermindamage) + monstermaximumdamage;
-        int critChance = randomizer.nextInt(50);
+        int critChance = randomizer.nextInt(45);
         int evade = randomizer.nextInt(22);
 
         if (evade < 15) {
