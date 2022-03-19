@@ -19,8 +19,7 @@ public class MainActivity extends Activity implements View.OnClickListener {
 
     Button btnNxturn;
     ImageButton First, Second, Third, Forth;
-    ProgressBar healthbar, healthbar2;
-
+   
 
 
     String Assasin = "Phantom Assasin";
@@ -29,10 +28,6 @@ public class MainActivity extends Activity implements View.OnClickListener {
     int heromp = 700;
     int heronmindamage = 172;
     int heromaxdamage = 210;
-    int heroHpPercent;
-    int Heromanapercent;
-    int mosntermanapercent;
-    int monsterhppercent;
     String monsname = "Ogre";
 
     int monsterhp = 4000;
@@ -63,15 +58,7 @@ public class MainActivity extends Activity implements View.OnClickListener {
         Combatxt = findViewById(R.id.Combatxt);
 
 
-        //hp bar
-        healthbar = findViewById(R.id.healthbar);
-        healthbar2 = findViewById(R.id.healthbartwo);
-
-        healthbar.setMax(100);
-        healthbar2.setMax(100);
-
-
-
+        
         btnNxturn = findViewById(R.id.Nxturn);
 
 
@@ -150,37 +137,11 @@ public class MainActivity extends Activity implements View.OnClickListener {
         } else if (buttoncounter == 0) {
             Forth.setEnabled(true);
         }
-        //hero hp
-        if ((int) heroHpPercent > 80 && (int) heroHpPercent <= 115) {
-            healthbar.setProgressTintList(ColorStateList.valueOf(getResources().getColor(R.color.green)));
-        } else if ((int) heroHpPercent >= 60 && (int) heroHpPercent <= 72) {
-            healthbar.setProgressTintList(ColorStateList.valueOf(getResources().getColor(R.color.green)));
-        } else if ((int) heroHpPercent >= 32 && (int) heroHpPercent <= 40) {
-            healthbar.setProgressTintList(ColorStateList.valueOf(getResources().getColor(R.color.yellow)));
-        } else if ((int) heroHpPercent >= 15 && (int) heroHpPercent <= 20) {
-            healthbar.setProgressTintList(ColorStateList.valueOf(getResources().getColor(R.color.orange)));
-        } else {
-            healthbar.setProgressTintList(ColorStateList.valueOf((getResources().getColor(R.color.red))));
-        }
-
-        //monster hp
-        if ((int) monsterhppercent > 80 && (int) monsterhppercent <= 100) {
-            healthbar2.setProgressTintList(ColorStateList.valueOf(getResources().getColor(R.color.green)));
-        } else if ((int) monsterhppercent >= 50 && (int) monsterhppercent <= 75) {
-            healthbar2.setProgressTintList(ColorStateList.valueOf(getResources().getColor(R.color.green)));
-        } else if ((int) monsterhppercent >= 25 && (int) monsterhppercent <= 50) {
-            healthbar2.setProgressTintList(ColorStateList.valueOf(getResources().getColor(R.color.yellow)));
-        } else if ((int) monsterhppercent >= 10 && (int) monsterhppercent <= 25) {
-            healthbar2.setProgressTintList(ColorStateList.valueOf(getResources().getColor(R.color.orange)));
-        } else {
-            healthbar2.setProgressTintList(ColorStateList.valueOf((getResources().getColor(R.color.red))));
-        }
-
+        
         switch (v.getId()) {
             case R.id.skillone:
                 monsterhp = monsterhp - 270;
                 monsterhppercent = monsterhp * 100 / 4000;
-                healthbar2.setProgress((int) monsterhppercent, true);
                 turnNumber++;
                 Monsterhptxt.setText(String.valueOf(monsterhp));
                 btnNxturn.setText("Next Turn (" + String.valueOf(turnNumber) + ")");
@@ -203,7 +164,6 @@ public class MainActivity extends Activity implements View.OnClickListener {
             case R.id.skilltwo:
                 monsterhp = monsterhp - 270;
                 monsterhppercent = monsterhp * 100 / 4000;
-                healthbar2.setProgress((int) monsterhppercent, true);
                 turnNumber++;
                 Monsterhptxt.setText(String.valueOf(monsterhp));
                 btnNxturn.setText("Next Turn (" + String.valueOf(turnNumber) + ")");
@@ -226,7 +186,6 @@ public class MainActivity extends Activity implements View.OnClickListener {
             case R.id.skillfour:
                 monsterhp = monsterhp - 270;
                 monsterhppercent = monsterhp * 100 / 4000;
-                healthbar2.setProgress((int) monsterhppercent, true);
                 turnNumber++;
                 Monsterhptxt.setText(String.valueOf(monsterhp));
                 btnNxturn.setText("Next Turn (" + String.valueOf(turnNumber) + ")");
@@ -252,7 +211,6 @@ public class MainActivity extends Activity implements View.OnClickListener {
                 if (turnNumber % 2 == 1) { //add
                     monsterhp = monsterhp - herodps;
                     monsterhppercent = monsterhp * 100 / 4000;
-                    healthbar2.setProgress((int) monsterhppercent, true);
                     turnNumber++;
                     Monsterhptxt.setText(String.valueOf(monsterhp));
                     btnNxturn.setText("Next Turn (" + String.valueOf(turnNumber) + ")");
@@ -284,7 +242,6 @@ public class MainActivity extends Activity implements View.OnClickListener {
                     } else {
                         herohp = herohp - monsdps;
                         heroHpPercent = herohp * 100 / 1210;
-                        healthbar.setProgress((int) heroHpPercent, true);
                         turnNumber++;
                         Characterhptxt.setText(String.valueOf(herohp));
                         btnNxturn.setText("Next Turn (" + String.valueOf(turnNumber) + ")");
