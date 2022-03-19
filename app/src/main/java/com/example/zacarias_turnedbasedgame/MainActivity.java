@@ -99,7 +99,7 @@ public class MainActivity extends Activity implements View.OnClickListener {
         if (evade < 15) {
 
         }
-        if (critChance <= 25) {
+        if (critChance <= 23) {
 
 
         }
