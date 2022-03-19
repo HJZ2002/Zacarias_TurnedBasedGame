@@ -97,27 +97,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
-    <ProgressBar
-        android:id="@+id/healthbar"
-        style="?android:attr/progressBarStyleHorizontal"
-        android:layout_width="87dp"
-        android:layout_height="21dp"
-        android:layout_marginStart="12dp"
-        android:layout_marginTop="84dp"
-        android:progressDrawable="@color/green"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <ProgressBar
-        android:id="@+id/healthbartwo"
-        style="?android:attr/progressBarStyleHorizontal"
-        android:layout_width="89dp"
-        android:layout_height="22dp"
-        android:layout_marginTop="80dp"
-        android:layout_marginEnd="24dp"
-        android:progressDrawable="@color/green"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+   
 
     <Button
         android:id="@+id/Nxturn"
