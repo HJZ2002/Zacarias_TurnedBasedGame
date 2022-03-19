@@ -152,7 +152,7 @@ public class MainActivity extends Activity implements View.OnClickListener {
 
                 if (monsterhp < 0) {
                     Combatxt.setText("Our Hero " + String.valueOf(Assasin) + " dealt " + String.valueOf(herodps) + " to the monster. The Hero has won victorious!.");
-                    herohp = 1200;
+                    herohp = 1210;
                     monsterhp = 4000;
                     turnNumber = 1;
                     btnNxturn.setText("Reset Game");
@@ -174,7 +174,7 @@ public class MainActivity extends Activity implements View.OnClickListener {
 
                 if (monsterhp < 0) {
                     Combatxt.setText("Our Hero " + String.valueOf(Assasin) + " dealt " + String.valueOf(herodps) + " to the monster. The Hero has won victorious!.");
-                    herohp = 1200;
+                    herohp = 1210;
                     monsterhp = 4000;
                     turnNumber = 1;
                     btnNxturn.setText("Reset Game");
@@ -196,7 +196,7 @@ public class MainActivity extends Activity implements View.OnClickListener {
 
                 if (monsterhp < 0) {
                     Combatxt.setText("Our Hero " + String.valueOf(Assasin) + " dealt " + String.valueOf(herodps) + " to the monster. The Hero has won victorious!.");
-                    herohp = 1200;
+                    herohp = 1210;
                     monsterhp = 4000;
                     turnNumber = 1;
                     btnNxturn.setText("Reset Game");
@@ -219,7 +219,7 @@ public class MainActivity extends Activity implements View.OnClickListener {
 
                     if (monsterhp < 0) {
                         Combatxt.setText("Our Hero " + String.valueOf(Assasin) + " dealt " + String.valueOf(herodps) + " to the monster. The Hero has won victorious!.");
-                        herohp = 1200;
+                        herohp = 1210;
                         monsterhp = 4000;
                         turnNumber = 1;
                         btnNxturn.setText("Reset Game");
@@ -250,7 +250,7 @@ public class MainActivity extends Activity implements View.OnClickListener {
                         if (herohp < 0) {
 
                             Combatxt.setText("The Monster " + String.valueOf(monsname) + " dealt " + String.valueOf(monsdps) + " to the monster. Game Over.");
-                            herohp = 1200;
+                            herohp = 1210;
                             monsterhp = 4000;
                             turnNumber = 1;
                             btnNxturn.setText("Reset Game");
