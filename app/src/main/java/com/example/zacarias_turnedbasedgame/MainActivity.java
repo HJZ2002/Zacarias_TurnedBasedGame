@@ -1,15 +1,12 @@
 package com.example.zacarias_turnedbasedgame;
 
-import android.app.ActionBar;
 import android.app.Activity;
-import android.content.res.ColorStateList;
 import android.os.Bundle;
 import android.view.View;
 import android.view.Window;
 import android.view.WindowManager;
 import android.widget.Button;
 import android.widget.ImageButton;
-import android.widget.ProgressBar;
 import android.widget.TextView;
 
 import java.util.Random;
@@ -141,7 +138,6 @@ public class MainActivity extends Activity implements View.OnClickListener {
         switch (v.getId()) {
             case R.id.skillone:
                 monsterhp = monsterhp - 270;
-                monsterhppercent = monsterhp * 100 / 4000;
                 turnNumber++;
                 Monsterhptxt.setText(String.valueOf(monsterhp));
                 btnNxturn.setText("Next Turn (" + String.valueOf(turnNumber) + ")");
@@ -163,7 +159,6 @@ public class MainActivity extends Activity implements View.OnClickListener {
                 break;
             case R.id.skilltwo:
                 monsterhp = monsterhp - 270;
-                monsterhppercent = monsterhp * 100 / 4000;
                 turnNumber++;
                 Monsterhptxt.setText(String.valueOf(monsterhp));
                 btnNxturn.setText("Next Turn (" + String.valueOf(turnNumber) + ")");
@@ -185,7 +180,6 @@ public class MainActivity extends Activity implements View.OnClickListener {
                 break;
             case R.id.skillfour:
                 monsterhp = monsterhp - 270;
-                monsterhppercent = monsterhp * 100 / 4000;
                 turnNumber++;
                 Monsterhptxt.setText(String.valueOf(monsterhp));
                 btnNxturn.setText("Next Turn (" + String.valueOf(turnNumber) + ")");
@@ -210,7 +204,6 @@ public class MainActivity extends Activity implements View.OnClickListener {
                 //
                 if (turnNumber % 2 == 1) { //add
                     monsterhp = monsterhp - herodps;
-                    monsterhppercent = monsterhp * 100 / 4000;
                     turnNumber++;
                     Monsterhptxt.setText(String.valueOf(monsterhp));
                     btnNxturn.setText("Next Turn (" + String.valueOf(turnNumber) + ")");
@@ -241,7 +234,6 @@ public class MainActivity extends Activity implements View.OnClickListener {
                         }
                     } else {
                         herohp = herohp - monsdps;
-                        heroHpPercent = herohp * 100 / 1210;
                         turnNumber++;
                         Characterhptxt.setText(String.valueOf(herohp));
                         btnNxturn.setText("Next Turn (" + String.valueOf(turnNumber) + ")");
@@ -270,4 +262,3 @@ public class MainActivity extends Activity implements View.OnClickListener {
         }
     }
 }
-
