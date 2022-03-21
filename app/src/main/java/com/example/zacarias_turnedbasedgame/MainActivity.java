@@ -141,18 +141,17 @@ public class MainActivity extends Activity implements View.OnClickListener {
                 turnNumber++;
                 Monsterhptxt.setText(String.valueOf(monsterhp));
                 btnNxturn.setText("Next Turn (" + String.valueOf(turnNumber) + ")");
-
+                
                 Combatxt.setText(" Our Hero " + String.valueOf(Assasin) + " used slow!. It dealt " + String.valueOf(270) + " to the monster. The monster has now slow effect");
                 disablestatus = true;
                 statuscounter = 3;
-
+                
                 if (monsterhp < 0) {
                     Combatxt.setText("Our Hero " + String.valueOf(Assasin) + " dealt " + String.valueOf(herodps) + " to the monster. The Hero has won victorious!.");
                     herohp = 1210;
                     monsterhp = 4000;
                     turnNumber = 1;
                     btnNxturn.setText("Reset Game");
-
 
                 }
                 buttoncounter = 5;
@@ -187,7 +186,7 @@ public class MainActivity extends Activity implements View.OnClickListener {
                 Combatxt.setText("Our Hero " + String.valueOf(Assasin) + " used forth skill!. It dealt " + String.valueOf(500) + " it deal a lot of damage");
                 disablestatus = false;
                 statuscounter = 5;
-
+                
                 if (monsterhp < 0) {
                     Combatxt.setText("Our Hero " + String.valueOf(Assasin) + " dealt " + String.valueOf(herodps) + " to the monster. The Hero has won victorious!.");
                     herohp = 1210;
@@ -207,9 +206,7 @@ public class MainActivity extends Activity implements View.OnClickListener {
                     turnNumber++;
                     Monsterhptxt.setText(String.valueOf(monsterhp));
                     btnNxturn.setText("Next Turn (" + String.valueOf(turnNumber) + ")");
-
                     Combatxt.setText("Our Hero " + String.valueOf(Assasin) + " dealt " + String.valueOf(herodps) + " to the monster.");
-
                     if (monsterhp < 0) {
                         Combatxt.setText("Our Hero " + String.valueOf(Assasin) + " dealt " + String.valueOf(herodps) + " to the monster. The Hero has won victorious!.");
                         herohp = 1210;
@@ -223,8 +220,6 @@ public class MainActivity extends Activity implements View.OnClickListener {
                         statuscounter--;
                     }
                     buttoncounter--;
-
-
                 } else if (turnNumber % 2 != 1) {
                     if (disablestatus == true) {
                         Combatxt.setText("The enemy is still slowed for 3 turns" + String.valueOf(statuscounter) + " turns ");
